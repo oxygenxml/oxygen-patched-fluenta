@@ -39,7 +39,7 @@ public class Preferences {
 	}
 
 	private Preferences() throws IOException {
-		preferencesFile = new File(workDir, "preferences.json");
+		preferencesFile = new File(getPreferencesFolder(), "preferences.json");
 		if (!preferencesFile.exists()) {
 			try (InputStream in = Preferences.class.getResourceAsStream("preferences.json")) {
 				try (InputStreamReader reader = new InputStreamReader(in, StandardCharsets.UTF_8)) {
