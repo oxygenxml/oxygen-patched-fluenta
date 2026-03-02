@@ -781,7 +781,7 @@ export class Fluenta {
             Fluenta.systemInfoWindow.show();
         });
         Fluenta.systemInfoWindow.on('close', () => {
-            Fluenta.aboutWindow.focus();
+            Fluenta.systemInfoWindow.getParentWindow()?.focus();
         });
     }
 
@@ -1075,7 +1075,7 @@ export class Fluenta {
             Fluenta.addTargetLangWindow.show();
         });
         Fluenta.addTargetLangWindow.on('close', () => {
-            parentWindow.focus();
+            Fluenta.addTargetLangWindow.getParentWindow()?.focus();
         });
     }
 
@@ -1588,7 +1588,7 @@ export class Fluenta {
             Fluenta.addConfigurationFileWindow.show();
         });
         Fluenta.addConfigurationFileWindow.on('close', () => {
-            Fluenta.settingsWindow.focus();
+            Fluenta.addConfigurationFileWindow.getParentWindow()?.focus();
         });
     }
 
@@ -1646,7 +1646,7 @@ export class Fluenta {
             Fluenta.editConfigurationFileWindow.webContents.send('set-filterData', data);
         });
         Fluenta.editConfigurationFileWindow.on('close', () => {
-            Fluenta.settingsWindow.focus();
+            Fluenta.editConfigurationFileWindow.getParentWindow()?.focus();
         });
     }
 
@@ -1742,7 +1742,7 @@ export class Fluenta {
             Fluenta.elementConfigWindow.webContents.send('set-elementConfig', arg);
         });
         Fluenta.elementConfigWindow.on('close', () => {
-            Fluenta.editConfigurationFileWindow.focus();
+            Fluenta.elementConfigWindow.getParentWindow()?.focus();
         });
     }
 
@@ -2115,7 +2115,7 @@ export class Fluenta {
             Fluenta.projectMemoriesWindow.show();
         });
         Fluenta.projectMemoriesWindow.on('close', () => {
-            parentWindow.focus();
+            Fluenta.projectMemoriesWindow.getParentWindow()?.focus();
         });
     }
 
@@ -2196,12 +2196,7 @@ export class Fluenta {
             Fluenta.licensesWindow.show();
         });
         Fluenta.licensesWindow.on('close', () => {
-            if (from === 'menu') {
-                Fluenta.mainWindow.focus();
-            }
-            if (from === 'aboutDialog') {
-                Fluenta.aboutWindow.focus();
-            }
+            Fluenta.licensesWindow.getParentWindow()?.focus();
         });
     }
 
@@ -2266,7 +2261,7 @@ export class Fluenta {
             licenseWindow.show();
         });
         licenseWindow.on('close', () => {
-            this.licensesWindow.focus();
+            Fluenta.licensesWindow.getParentWindow()?.focus();
         });
         licenseWindow.webContents.on('did-finish-load', () => {
             setTimeout(() => {

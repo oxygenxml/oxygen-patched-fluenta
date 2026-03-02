@@ -3,10 +3,10 @@
   <parent>
     <groupId>com.oxygenxml</groupId>
     <artifactId>oxygen-patched-superpom</artifactId>
-    <version>27.1-SNAPSHOT</version>
+    <version>28.1-SNAPSHOT</version>
   </parent>
   <artifactId>oxygen-patched-fluenta</artifactId>
-  <version>5.2.1-SNAPSHOT</version>
+  <version>5.4.1-SNAPSHOT</version>
   <dependencies>
 	  <dependency>
           <groupId>com.oxygenxml</groupId>
@@ -16,12 +16,12 @@
 	  <dependency>
           <groupId>com.oxygenxml</groupId>
           <artifactId>oxygen-patched-openxliff</artifactId>
-          <version>4.3.0-SNAPSHOT</version>
+          <version>4.10.2-SNAPSHOT</version>
       </dependency>  
 	  <dependency>
           <groupId>com.oxygenxml</groupId>
           <artifactId>oxygen-patched-xmljava</artifactId>
-          <version>2.1.1-SNAPSHOT</version>
+          <version>3.1.1-SNAPSHOT</version>
       </dependency>  
       	<dependency>
 			<groupId>org.mapdb</groupId>
@@ -92,6 +92,10 @@
     <maven.compiler.target>17</maven.compiler.target>
     <maven.compiler.release>17</maven.compiler.release>
     <target.jre.version>17</target.jre.version>
+    <patched.groupId>com.maxprograms</patched.groupId>
+    <patched.artifactId>fluenta</patched.artifactId>
+    <patched.version>5.4.0</patched.version>
+    <patched.buildId>20250529_1723</patched.buildId>
   </properties>
 
 <profiles>
