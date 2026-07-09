@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> **This repository is archived.** It preserves the last open-source version before the license change. No further updates will be pushed here due to licensing restrictions.
+
 # Fluenta DITA Translation Manager
 
 ![Fluenta logo](https://www.maxprograms.com/images/fluenta_128.png)
